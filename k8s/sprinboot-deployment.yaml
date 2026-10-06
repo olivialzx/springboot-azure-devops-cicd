@@ -15,18 +15,16 @@ spec:
         app: springboot-app
     spec:
       containers:
-      - name: springboot-app
-        image: democontainerreg772.azurecr.io/springbootapp:latest
-        ports:
-        - containerPort: 8080
-      imagePullSecrets:
-        - name: acr-auth
+        - name: springboot-app
+          image: springbootacr772.azurecr.io/springbootapp:latest
+          ports:
+            - containerPort: 8080
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: springboot-app  
+  name: springboot-app
   labels:
     app: springboot-app
 spec:
