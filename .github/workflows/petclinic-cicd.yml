@@ -28,7 +28,7 @@ jobs:
           cache: maven
 
       - name: Build and Test
-        run: ./mvnw -B clean verify
+        run: mvn -B clean verify
 
       - name: Check Build Output
         run: ls -la target/
